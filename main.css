@@ -9,6 +9,7 @@
 body {
   font-family: "Josefin Sans", sans-serif;
   background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -196,3 +197,16 @@ button img {
     padding: 1.16rem;
   }
 }
+
+/* .invalid {
+  border: 2px solid hsl(0, 100%, 74%) !important;
+  background-image: url("images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: 96%;
+  margin-bottom: 0 !important;
+  color: hsl(0, 100%, 74%) !important;
+}
+
+.invalid::placeholder {
+  visibility: hidden;
+} */
