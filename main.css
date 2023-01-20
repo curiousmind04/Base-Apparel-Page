@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 446px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 6rem;
+}
+
+.logo-container {
+  width: 6rem;
+  height: 1.2rem;
+  margin-left: 2rem;
+}
+
+.logo-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.lady img {
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+h1 {
+  color: hsl(0, 36%, 70%);
+  text-transform: uppercase;
+  width: 95%;
+  text-align: center;
+  letter-spacing: 10px;
+  font-weight: 300;
+  font-size: 40px;
+  margin-bottom: 1.6rem;
+}
+
+h1 div {
+  color: hsl(0, 6%, 24%);
+  font-weight: 600;
+  text-align: center;
+}
+
+p {
+  color: hsl(0, 36%, 70%);
+  width: 80%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 2.2rem;
+}
+
+.form-container {
+  width: 82%;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.form {
+  width: 100%;
+}
+
+.form-container input {
+  background: inherit;
+  height: 3rem;
+  width: 95%;
+  border-radius: 30px;
+  padding-left: 1.5rem;
+  padding-right: 3.7rem;
+  border: 1px solid hsl(0, 36%, 70%);
+  color: hsl(0, 6%, 24%);
+  font-weight: 600;
+  font: inherit;
+}
+
+.form-container input:focus {
+  outline: none;
+}
+
+.form-container input::placeholder {
+  color: hsl(0, 36%, 70%);
+  opacity: 0.6;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+button {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  height: 3rem;
+  /* width: 21%; */
+  width: 65px;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  padding: 0.875rem;
+  cursor: pointer;
+}
+
+button:hover,
+button:active {
+  background: linear-gradient(135deg, hsl(0, 63%, 93%), hsl(0, 83%, 77%));
+}
+
+button img {
+  height: 100%;
+}
