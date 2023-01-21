@@ -46,7 +46,24 @@
         </p>
         <div class="form-container">
           <form class="form" novalidate>
-            <input type="email" placeholder="Email Address" required />
+            <input
+              type="email"
+              class="email"
+              id="email"
+              placeholder="Email Address"
+            />
+            <span class="no-email"> You forgot to add your email </span>
+            <span class="invalid-email-input">
+              Please provide a valid email
+            </span>
+            <img
+              src="images/icon-error.svg"
+              class="error-icon"
+              alt="error icon"
+            />
+            <!-- <div class="error-icon">
+              <img src="images/icon-error.svg" alt="error icon" />
+            </div> -->
             <button type="submit">
               <img src="images/icon-arrow.svg" alt="button arrow" />
             </button>

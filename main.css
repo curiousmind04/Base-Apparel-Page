@@ -8,8 +8,11 @@
 
 body {
   font-family: "Josefin Sans", sans-serif;
-  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-  background-size: contain;
+  background-color: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,11 +98,12 @@ p {
   width: 95%;
   border-radius: 1.875rem;
   padding-left: 1.5rem;
-  padding-right: 3.7rem;
+  padding-right: 5.3rem;
   border: 1px solid hsl(0, 36%, 70%);
   color: hsl(0, 6%, 24%);
   font-weight: 600;
   font: inherit;
+  margin-bottom: 0.8rem;
 }
 
 .form-container input:focus {
@@ -108,15 +112,30 @@ p {
 
 .form-container input::placeholder {
   color: hsl(0, 36%, 70%);
-  opacity: 0.6;
+  opacity: 0.4;
   font-family: "Josefin Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+form span {
+  display: none;
+  color: hsl(0, 93%, 68%);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form .error-icon {
+  display: none;
+  position: absolute;
+  top: 16%;
+  right: 66px;
 }
 
 button {
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   border: none;
   height: 3rem;
-  /* width: 21%; */
   width: 4rem;
   border-radius: 1.875rem;
   position: absolute;
@@ -125,11 +144,13 @@ button {
   z-index: 1;
   padding: 0.875rem;
   cursor: pointer;
+  box-shadow: 0 5px 10px rgb(228, 194, 194);
 }
 
 button:hover,
 button:active {
   background: linear-gradient(135deg, hsl(0, 63%, 93%), hsl(0, 83%, 77%));
+  box-shadow: 0 5px 15px rgb(196, 165, 165);
 }
 
 button img {
@@ -137,6 +158,9 @@ button img {
 }
 
 @media (min-width: 62.5rem) {
+  body {
+    background: url("images/bg-pattern-desktop.svg");
+  }
   .container {
     max-width: 94rem;
     display: grid;
@@ -184,29 +208,43 @@ button img {
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 2.5rem;
+    line-height: 1.7rem;
   }
   .form-container {
     width: 71%;
   }
   .form-container input {
     height: 3.5rem;
+    padding-right: 5.8rem;
+    padding-left: 1.8rem;
+    width: 88%;
+  }
+  .form-container input::placeholder {
+    font-size: 1rem;
+  }
+  form span {
+    text-align: left;
+    margin-left: 1.5rem;
+  }
+  .form .error-icon {
+    top: 20%;
+    right: 100px;
   }
   button {
     height: 3.5rem;
-    width: 6.25rem;
+    width: 6rem;
     padding: 1.16rem;
   }
 }
 
-/* .invalid {
-  border: 2px solid hsl(0, 100%, 74%) !important;
-  background-image: url("images/icon-error.svg");
-  background-repeat: no-repeat;
-  background-position: 96%;
-  margin-bottom: 0 !important;
-  color: hsl(0, 100%, 74%) !important;
+.invalid-email,
+.empty-email {
+  border: 2px solid hsl(0, 93%, 68%) !important;
 }
 
-.invalid::placeholder {
-  visibility: hidden;
-} */
+.invalid-email ~ .invalid-email-input,
+.empty-email + .no-email,
+.invalid-email ~ .error-icon,
+.empty-email ~ .error-icon {
+  display: block;
+}
