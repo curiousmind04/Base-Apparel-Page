@@ -154,14 +154,20 @@ button img {
 }
 
 @media (min-width: 62.5rem) {
+  html {
+    height: 100%;
+  }
   body {
     background: url("images/bg-pattern-desktop.svg");
+    height: 100%;
   }
   .container {
-    max-width: 94rem;
+    /* max-width: 94rem; */
+    min-width: 100%;
     display: grid;
     grid-template-columns: 10% 45% 45%;
     grid-template-rows: 1.5fr 5fr;
+    height: 100%;
   }
   header {
     align-self: center;
